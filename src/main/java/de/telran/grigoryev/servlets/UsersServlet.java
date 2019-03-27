@@ -1,4 +1,4 @@
-package de.telran.grigoryev.servlets;
+/*package de.telran.grigoryev.servlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.Properties;
 
-@WebServlet("/users")
+//@WebServlet("/addUser")
 public class UsersServlet extends HttpServlet {
 
     private Connection connection;
@@ -51,10 +51,10 @@ public class UsersServlet extends HttpServlet {
         String lastName = req.getParameter("last_name");
 
         try {
-          /*  Statement statement = connection.createStatement();
+           Statement statement = connection.createStatement();
             String sqlInsert = "INSERT INTO user (first_name,last_name)" +
                     " VALUES ('" + firstName + "','" + lastName + "');";
-            statement.execute(sqlInsert);*/
+            statement.execute(sqlInsert);
             PreparedStatement preparedStatement = connection.prepareStatement
                     ("INSERT INTO user(first_name,last_name) VALUES (?,?)");
             preparedStatement.setString(1,firstName);
@@ -65,3 +65,4 @@ public class UsersServlet extends HttpServlet {
         }
     }
 }
+*/
